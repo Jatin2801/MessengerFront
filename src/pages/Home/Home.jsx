@@ -1,13 +1,13 @@
 import React from 'react'
 import Sidebar from '../../components/Sidebar/Sidebar'
-import MsgContainer from '../../components/MsgContainer'
+import MsgContainer from '../../components/Messages/MsgContainer'
 
 const Home = () => {
   return (
-    <div className='flex sm:h-[450px] md:h-[550px] rounded-lg overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter 
-    backdrop-blur-lg bg-opacity-0'>
+    <div className='flex sm:h-[450px] md:h-[550px] rounded-lg overflow-hidden bg-clip-padding backdrop-filter 
+    backdrop-blur-sm  backdrop-opacity-100 '>
       <Sidebar/>
-      {/* <MsgContainer/> */}
+      <MsgContainer/>
     </div>
   )
 }
