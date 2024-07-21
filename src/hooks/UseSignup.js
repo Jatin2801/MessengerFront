@@ -13,7 +13,14 @@ const UseSignup = () => {
             headers : {"Content-Type" : "application/json"},
             body : JSON.stringify({ fullname, username, password, confirmpass, gender })
         })
-        const data = await res.json()
+        console.log('status is : ' + res.status);
+        if(!res.ok){
+            const data = await res.json();
+         toast.error(data.error) ;
+        return
+        }
+        //all is well, navigate to login page, and let user login with the newly created credentials
+        toast.success('Successfully Signed up')
         } catch (error) {
             toast.error(error.message)
         } finally {

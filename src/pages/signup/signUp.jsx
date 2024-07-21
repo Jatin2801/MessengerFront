@@ -17,7 +17,7 @@ const {loading,signup} = UseSignup()
 
 const handleSubmit = async (e) =>{
 e.preventDefault();
-await signup(inputs)
+await signup(inputs) // whenever we submit form we will paas our inputs to signup in UserSignup
 }
   
 const handleGender = (gender) => {
