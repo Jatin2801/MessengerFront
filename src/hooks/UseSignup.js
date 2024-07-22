@@ -3,9 +3,10 @@ import toast from "react-hot-toast"
 
 const UseSignup = () => {
     const [loading, setLoading] = useState(false) // ini. its false
+
     const signup = async ({ fullname, username, password, confirmpass, gender }) => { // these we got from the form of signup
         const success = handleInputErrors({ fullname, username, password, confirmpass, gender })
-        if (!success) return; // handleInputErrors returns true we will conti.
+        if (!success) return; // if handleInputErrors returns true we will conti.
         setLoading(true)
         try {
         const res = await fetch('/api/auth/signup',{ // prefix is in vite.config.js
@@ -13,7 +14,7 @@ const UseSignup = () => {
             headers : {"Content-Type" : "application/json"},
             body : JSON.stringify({ fullname, username, password, confirmpass, gender })
         })
-        console.log('status is : ' + res.status);
+       
         if(!res.ok){
             const data = await res.json();
          toast.error(data.error) ;
@@ -21,7 +22,8 @@ const UseSignup = () => {
         }
         //all is well, navigate to login page, and let user login with the newly created credentials
         toast.success('Successfully Signed up')
-        } catch (error) {
+        window.setTimeout(function(){ window.location = "/login"; },2500); 
+    }catch (error) {
             toast.error(error.message)
         } finally {
             setLoading(false)

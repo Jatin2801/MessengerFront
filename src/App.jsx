@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home/Home.jsx'
-import Login from './pages/Login/Login.jsx'
+import Login from './pages/login/login.jsx'
 import SignUp from './pages/signup/signUp.jsx'
 import {Toaster} from 'react-hot-toast'
 
