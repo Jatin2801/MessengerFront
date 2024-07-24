@@ -11,7 +11,6 @@ const Messages = () => {
         <SingleMsg/>
         <SingleMsg/>
         <SingleMsg/>
-        <SingleMsg/>
     </div>
   )
 }

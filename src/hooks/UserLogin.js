@@ -1,12 +1,12 @@
 import toast from "react-hot-toast"
 
 const UserLogin = () => {
-    const loginRoute = '/api/auth/login';
+   
     const login = async (username,password) => {
     const success =  handleInputErrors({username,password})
-    
+    if(!success) return
     try {
-        const res = await fetch(loginRoute,{
+        const res = await fetch("/api/auth/login",{
             method : "POST",
             headers : {"Content-Type" : "application/json"},
             body : JSON.stringify({username,password})
@@ -19,7 +19,7 @@ const UserLogin = () => {
         }
         if(res.ok){
               toast.success('Successfully Logged in')
-              window.setTimeout(function(){ window.location = "/"; },1000); 
+              window.setTimeout(function(){ window.location = "/Chat"; },1000); 
         }
     } catch (error) {
         console.log(error);

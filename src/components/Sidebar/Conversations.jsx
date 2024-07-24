@@ -9,12 +9,12 @@ const{conversations , getconversations} = useGetConversations()
     getconversations()
   },[])
  
-console.log("CONVERSATIONS:" , conversations)
+// console.log("CONVERSATIONS:" , conversations)
   return (
-    <div className='py-2 flex flex-col overflow-auto'>
+    <div className='py-2 flex flex-col overflow-scroll '>
       {conversations && conversations.length > 0 ? (
         conversations.map((conversation , idx) => (
-          <Conversation key={conversation._id} conversation={conversation} lastIdx={idx === conversations.length - 1}/>
+          <Conversation key={conversation._id} conversation={conversation} lastIdx={idx === conversations.length - 1}/> // this is props 
         ))
       ) : (
         <p className='text-black'>No conversations available</p>
