@@ -14,7 +14,7 @@ const UseLogout = () => {
             return new Error(data.error)
         }
         toast.success('Logged Out Successfully')
-        window.setTimeout(function(){ window.location = "/login"; },2500); 
+        window.setTimeout(function(){ window.location = "/login"; },1200); 
         return 
       
     } catch (error) {

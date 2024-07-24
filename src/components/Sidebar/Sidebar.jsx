@@ -14,7 +14,8 @@ await logout();
   return (
     <div className='border-r border-slate-600 p-4 flex flex-col'>
         <Search/>
-        <div className='divider px-3'></div>
+        <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+      
         <Conversations/> 
         <div className='mt-auto'>
       <RiLogoutBoxLine className='w-6 h-6 text-black cursor-pointer' onClick={handleLogout} />

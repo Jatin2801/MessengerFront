@@ -11,21 +11,19 @@ const UserLogin = () => {
             headers : {"Content-Type" : "application/json"},
             body : JSON.stringify({username,password})
         })
-        if(res.ok){
-            const data = await res.json();
+        const data = await res.json();
+        localStorage.setItem("chat-user", JSON.stringify(data));
 
-            toast.success('Successfully Logged in')
-    
-        window.setTimeout(function(){ window.location = "/"; },2500); 
-    
+        if(!res.ok){
+            toast.error('Wrong Username/Password')
         }
-         
+        if(res.ok){
+              toast.success('Successfully Logged in')
+              window.setTimeout(function(){ window.location = "/"; },1000); 
+        }
     } catch (error) {
         console.log(error);
     return toast.error(error.message)
-    }
-    finally{
-        console.log('finallu');
     }
  }
 

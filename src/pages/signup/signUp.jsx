@@ -61,7 +61,7 @@ const handleGender = (gender) => {
             Already have an account?
           </Link>
           <div>
-            <button className='btn btn-block text-gray-200 btn-sm mt-3 pr-10 btn-primary'>Signup</button>
+            <button onClick={handleSubmit} className='btn btn-block text-gray-200 btn-sm mt-3 pr-10 btn-primary'>Signup</button>
           </div>
         </form>
       </div>
