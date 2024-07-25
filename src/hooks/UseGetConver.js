@@ -6,12 +6,12 @@ const useGetConversations = () => {
     const  getconversations = async () =>{
         try {
             const userdata = JSON.parse(localStorage.getItem("chat-user"))
-            const uderId = userdata._id
+            const userId = userdata._id
            
             const res = await fetch('/api/users', {
                 method: "GET",
                 headers: {
-                    'user-id': uderId,
+                    'user-id': userId,
                 }
             }) // it is a get method 
             const data = await res.json()

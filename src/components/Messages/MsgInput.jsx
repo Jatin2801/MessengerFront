@@ -19,7 +19,7 @@ setMessage('')
          text-black w-full max-w-xs"
          value={message} onChange={(e) => setMessage(e.target.value)}
          />
-        <button type='submit' className='text-black absolute inset-y-0 end-0 mr-8 items-center flex pe-3 text-2xl'> <IoSendSharp/></button>
+        <button onClick={handleSubmit} type='submit' className='text-black absolute inset-y-0 end-0 mr-8 items-center flex pe-3 text-2xl'> <IoSendSharp/></button>
         </div>
         </form>
    
