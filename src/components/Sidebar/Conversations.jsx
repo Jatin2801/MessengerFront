@@ -4,11 +4,8 @@ import useGetConversations from '../../hooks/UseGetConver'
 
 
 const Conversations = () => {
-const{conversations , getconversations} = useGetConversations()
-  useEffect(()=>{
-    getconversations()
-  },[])
- 
+const{conversations } = useGetConversations()
+ console.log('inget' + conversations)
 // console.log("CONVERSATIONS:" , conversations)
   return (
     <div className='py-2 flex flex-col overflow-scroll '>
