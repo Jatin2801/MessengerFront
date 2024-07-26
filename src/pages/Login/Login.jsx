@@ -47,6 +47,7 @@ const Login = () => {
  					</div>
  				</form>
  			</div>
+			<p className='text-black ml-60 flex text-s font-semibold' > ❤️ From Jatin </p>
  		</div>
   )
 }

@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 import SingleMsg from './SingleMsg'
 import UseGetMsgs from '../../hooks/UseGetMsgs'
+import UseListenMsgs from '../../hooks/UseListenMsgs'
 
 const Messages = () => {
   const{loading,messages} = UseGetMsgs()
+ UseListenMsgs() //this will listen for new msgs 
  let lastMsgRef = useRef()
   
   useEffect(()=>{
