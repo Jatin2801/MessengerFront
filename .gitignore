@@ -27,3 +27,5 @@ vite.config.js
 .eslintrc.cjs
 tailwinf.config.js 
 main.jsx 
+package-lock.json
+App.jsx

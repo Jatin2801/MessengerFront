@@ -15,7 +15,6 @@ const Search = ()  => {
         if(search.length < 3){
             return toast.error('Give Atleast 3 characters')
         }
-        console.log(conversations)
         const conver = conversations.find((c) => c.fullname.toLowerCase().includes(search.toLowerCase()))
         if(conver){
             setSelectedConversation(conver)
@@ -27,8 +26,8 @@ const Search = ()  => {
     return (
         <div>
             <form onSubmit={handleSubmit} className='gap-2 flex mt-1 items-center'>
-                <input type='text' placeholder='Search...'
-                value={search} onChange={(e)=>setSearch(e.target.value)} className='input bg-gray-300 placeholder-gray-800 ml-1 input-bordered rounded-full' />
+                <input type='text' placeholder='Search by name'
+                value={search} onChange={(e)=>setSearch(e.target.value)} className='input bg-gray-300 text-gray-900 font-semibold placeholder-gray-800 ml-1 input-bordered rounded-full' />
                 <button onClick={handleSubmit} type='submit' className='btn btn-circle border-none mr-1 mt-1 bg-sky-600 text-white'>
                  <IoSearchSharp className='w-6 h-6' />
                 </button>
